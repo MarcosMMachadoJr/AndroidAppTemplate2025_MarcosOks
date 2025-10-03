@@ -76,52 +76,25 @@
         android:textColor="#B8B8B8"
         android:textColorHint="#B8B8B8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registerEmailEditText" />
 
-    <Button
-        android:id="@+id/salvarButton"
-        android:layout_width="160dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="#009530"
-        android:fontFamily="monospace"
-        android:text="Atualizar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/registerConfirmPasswordEditText" />
-
     <EditText
-        android:id="@+id/registerConfirmPasswordEditText"
+        android:id="@+id/registerCorFavoritaEditText"
         android:layout_width="320dp"
         android:layout_height="46dp"
         android:layout_marginTop="16dp"
         android:background="#565656"
         android:fontFamily="monospace"
-        android:hint="Confirmar Senha"
-        android:inputType="textPassword"
+        android:hint="Cor favorita"
         android:paddingStart="15dp"
         android:textColor="#B8B8B8"
         android:textColorHint="#B8B8B8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/registerPasswordEditText" />
-
-    <Button
-        android:id="@+id/sairButton"
-        android:layout_width="160dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#009530"
-        android:fontFamily="monospace"
-        android:text="Sair"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/salvarButton" />
+        app:layout_constraintTop_toBottomOf="@id/registerEnderecoEditText" />
 
     <EditText
         android:id="@+id/registerPasswordEditText"
@@ -136,9 +109,52 @@
         android:textColor="#B8B8B8"
         android:textColorHint="#B8B8B8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/registerEnderecoEditText" />
+        app:layout_constraintTop_toBottomOf="@id/registerCorFavoritaEditText" />
+
+    <Button
+        android:id="@+id/salvarButton"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#009530"
+        android:fontFamily="monospace"
+        android:text="Atualizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerConfirmPasswordEditText" />
+
+    <Button
+        android:id="@+id/sairButton"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#009530"
+        android:fontFamily="monospace"
+        android:text="Sair"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/salvarButton" />
+
+    <EditText
+        android:id="@+id/registerConfirmPasswordEditText"
+        android:layout_width="320dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:background="#565656"
+        android:fontFamily="monospace"
+        android:hint="Confirmar Senha"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        android:textColor="#B8B8B8"
+        android:textColorHint="#B8B8B8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerPasswordEditText" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
