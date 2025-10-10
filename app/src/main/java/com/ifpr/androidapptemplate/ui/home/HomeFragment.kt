@@ -63,9 +63,11 @@ class HomeFragment : Fragment() {
                             .inflate(R.layout.item_template, container, false)
 
                         val imageView = itemView.findViewById<ImageView>(R.id.item_image)
-                        val enderecoView = itemView.findViewById<TextView>(R.id.item_endereco)
+                        val objetoView = itemView.findViewById<TextView>(R.id.objetoAdd)
+                        val quantidadeView = itemView.findViewById<TextView>(R.id.quantidadeItens)
 
-                        enderecoView.text = "Endereço: ${item.endereco ?: "Não informado"}"
+                        objetoView.text = "Objeto: ${item.objeto ?: "Não informado"}"
+                        quantidadeView.text = "Objeto: ${item.quantidade ?: "Não informado"}"
 
                         if (!item.imageUrl.isNullOrEmpty()) {
                             Glide.with(container.context).load(item.imageUrl).into(imageView)

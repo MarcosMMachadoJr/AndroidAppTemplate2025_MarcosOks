@@ -29,8 +29,10 @@ class DashboardFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null
 
-    private lateinit var enderecoEditText: EditText
+    private lateinit var objetoAdd: EditText
     private lateinit var itemImageView: ImageView
+
+    private lateinit var quantidadeItens: EditText
     private var imageUri: Uri? = null
 
 
@@ -66,7 +68,8 @@ class DashboardFragment : Fragment() {
         itemImageView = view.findViewById(R.id.image_item)
         salvarButton = view.findViewById(R.id.salvarItemButton)
         selectImageButton = view.findViewById(R.id.button_select_image)
-        enderecoEditText = view.findViewById(R.id.enderecoItemEditText)
+        objetoAdd = view.findViewById(R.id.objetoAdd)
+        quantidadeItens = view.findViewById(R.id.quantidadeItens)
         //TODO("Capture aqui os outro campos que foram inseridos no layout. Por exemplo, ate
         // o momento so foi capturado o endereco (EditText)")
 
@@ -97,9 +100,10 @@ class DashboardFragment : Fragment() {
 
     private fun salvarItem() {
         //TODO("Capture aqui o conteudo que esta nos outros editTexts que foram criados")
-        val endereco = enderecoEditText.text.toString().trim()
+        val objeto = objetoAdd.text.toString().trim()
+        val quantidade = quantidadeItens.text.toString().trim().toIntOrNull()
 
-        if (endereco.isEmpty() || imageUri == null) {
+        if (objeto.isEmpty() || imageUri == null) {
             Toast.makeText(context, "Por favor, preencha todos os campos", Toast.LENGTH_SHORT)
                 .show()
             return
@@ -116,10 +120,11 @@ class DashboardFragment : Fragment() {
 
             if (bytes != null) {
                 val base64Image = Base64.encodeToString(bytes, Base64.DEFAULT)
-                val endereco = enderecoEditText.text.toString().trim()
+                val objeto = objetoAdd.text.toString().trim()
+                val quantidade = quantidadeItens.text.toString().trim().toIntOrNull()
                 //TODO("Capture aqui o conteudo que esta nos outros editTexts que foram criados")
 
-                val item = Item(endereco, base64Image)
+                val item = Item(objeto, quantidade, base64Image)
 
                 saveItemIntoDatabase(item)
             }

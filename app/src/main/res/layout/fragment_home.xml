@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3A3A3A"
     tools:context=".ui.home.HomeFragment">
 
     <TextView
@@ -10,7 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/title_itens"
+        android:fontFamily="monospace"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:text="Objetos"
         android:textSize="20sp"
         android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent"
@@ -21,6 +25,7 @@
         android:id="@+id/scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="#3A3A3A"
         app:layout_constraintTop_toBottomOf="@id/text_home"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

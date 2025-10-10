@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3A3A3A"
     tools:context=".ui.dashboard.DashboardFragment">
 
 
@@ -12,32 +13,37 @@
         android:id="@+id/text_dashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="60dp"
         android:textAlignment="center"
-        android:textSize="20sp"
-        android:text="Cadastro de ..."
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="Cadastro de objetos"
+        android:fontFamily="monospace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/image_item"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
         android:contentDescription="Store Photo"
         android:scaleType="centerCrop"
         android:src="@android:drawable/gallery_thumb"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_dashboard" />
 
     <Button
         android:id="@+id/button_select_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
         android:layout_marginTop="8dp"
+        android:backgroundTint="#009530"
+        android:fontFamily="monospace"
         android:text="Selecionar Imagem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,23 +51,51 @@
 
 
     <EditText
-        android:id="@+id/enderecoItemEditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Endereço"
+        android:id="@+id/objetoAdd"
+        android:layout_width="320dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:background="#565656"
+        android:fontFamily="monospace"
+        android:hint="Objeto"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:textColor="#B8B8B8"
+        android:textColorHint="#B8B8B8"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_select_image" />
 
-
     <Button
         android:id="@+id/salvarItemButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#009530"
+        android:fontFamily="monospace"
         android:text="Salvar"
-        app:layout_constraintTop_toBottomOf="@id/enderecoItemEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/quantidadeItens" />
+
+    <EditText
+        android:id="@+id/quantidadeItens"
+        android:layout_width="320dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:background="#565656"
+        android:fontFamily="monospace"
+        android:hint="quantidade"
+        android:inputType="number"
+        android:paddingStart="15dp"
+        android:textColor="#B8B8B8"
+        android:textColorHint="#B8B8B8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/objetoAdd" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

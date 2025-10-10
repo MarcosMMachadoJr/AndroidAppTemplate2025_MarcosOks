@@ -6,29 +6,39 @@
     android:padding="8dp">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="115dp"
+        android:orientation="horizontal"
         android:padding="8dp">
 
         <ImageView
             android:id="@+id/item_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop" />
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/item_endereco"
+                android:id="@+id/objetoAdd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Endereço:"
+                android:text="Objeto:"
+                android:textColor="#B8B8B8"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/quantidadeItens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantidade:"
+                android:textColor="#B8B8B8"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -39,7 +49,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#CCCCCC"
+        android:background="#B8B8B8"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"/>
 </LinearLayout>
