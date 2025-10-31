@@ -4,5 +4,7 @@ data class Item(
     var objeto: String? = null,
     var quantidade: Int? = null,
     val base64Image: String? = null,
-    val imageUrl: String? = null
+    val imageUrl: String? = null,
+    var latitude: Double? = null,
+    var longitude: Double? = null
 )
