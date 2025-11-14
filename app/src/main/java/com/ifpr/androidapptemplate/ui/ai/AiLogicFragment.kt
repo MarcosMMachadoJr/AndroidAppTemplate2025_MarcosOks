@@ -31,10 +31,9 @@ class AiLogicFragment : Fragment() {
     private lateinit var model: GenerativeModel
 
     private lateinit var imageButton: Button
-
     private var imageUri: Uri? = null
-
     private lateinit var itemImageView: ImageView
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,6 +47,8 @@ class AiLogicFragment : Fragment() {
 
         model = Firebase.ai(backend = GenerativeBackend.googleAI())
             .generativeModel("gemini-2.0-flash")
+
+
 
         imageButton = view.findViewById(R.id.btn_select_image)
         itemImageView = view.findViewById(R.id.bitmapImageView)
@@ -86,8 +87,18 @@ class AiLogicFragment : Fragment() {
             }
         }
 
-
         return view
+    }
+
+    private fun generateFromPrompt(prompt: String) {
+        lifecycleScope.launch {
+            try {
+                val response = model.generateContent(prompt)
+                resultText.text = response.text ?: "Nenhuma resposta recebida."
+            } catch (e: Exception) {
+                resultText.text = "Erro ao gerar resposta: ${e.message}"
+            }
+        }
     }
 
     private fun generateFromPrompt(prompt: String, bitmap: Bitmap) {
